@@ -1,0 +1,30 @@
+{
+  "name": "backquiz",
+  "version": "1.0.0",
+  "description": "Back para una app de quices",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcvillacob/backQuiz.git"
+  },
+  "author": "Juan Camilo Villacob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcvillacob/backQuiz/issues"
+  },
+  "homepage": "https://github.com/jcvillacob/backQuiz#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
+  }
+}
