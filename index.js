@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+
+// Modules
 const user = require('./modules/user');
 const creator = require('./modules/creator');
-//const question = require('./modules/question');
+const subject = require('./modules/subject');
+const topic = require('./modules/topic');
+
+
+
 //const middleware = require('./middleware');
 const connectDB = require('./config/db');
 const cors = require('cors');
@@ -24,8 +30,10 @@ connectDB();
 
 // Routes
 app.use('/users', user.userRoutes); 
-app.use('/creators', creator.creatorRoutes); 
-//app.use('/questions', question.questionRoutes);
+app.use('/creators', creator.creatorRoutes);
+app.use('/subjects', subject.subjectRoutes);
+app.use('/topics', topic.topicRoutes);
+
 
 // Start the server
 const port = process.env.PORT || 3000;
