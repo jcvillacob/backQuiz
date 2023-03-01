@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const user = require('./modules/user');
+const creator = require('./modules/creator');
 //const question = require('./modules/question');
 //const middleware = require('./middleware');
 const connectDB = require('./config/db');
@@ -22,7 +23,8 @@ app.use(cors());
 connectDB();
 
 // Routes
-app.use('/users', user.userRoutes);
+app.use('/users', user.userRoutes); 
+app.use('/creators', creator.creatorRoutes); 
 //app.use('/questions', question.questionRoutes);
 
 // Start the server
