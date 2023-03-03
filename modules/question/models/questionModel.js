@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const productSchema = new Schema({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  price: { type: Number, required: true },
+const questionSchema = new mongoose.Schema({
+  statement: {type: String, required: true},
+  wrongAnswers: [{type: String, required: true}],
+  rightQuestion: {type: String, required: true},
+  justification: {type: String, required: true},
+  topic: {type: mongoose.Schema.Types.ObjectId, ref: 'Topic', required: true},
+  creator: {type: mongoose.Schema.Types.ObjectId, ref: 'Creator', required: true}
 });
 
-module.exports = mongoose.model('Product', productSchema);
+module.exports = mongoose.model('Question', questionSchema);

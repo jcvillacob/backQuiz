@@ -7,6 +7,7 @@ const user = require('./modules/user');
 const creator = require('./modules/creator');
 const subject = require('./modules/subject');
 const topic = require('./modules/topic');
+const question = require('./modules/question');
 
 
 
@@ -33,6 +34,7 @@ app.use('/users', user.userRoutes);
 app.use('/creators', creator.creatorRoutes);
 app.use('/subjects', subject.subjectRoutes);
 app.use('/topics', topic.topicRoutes);
+app.use('/questions', question.questionRoutes);
 
 
 // Start the server
